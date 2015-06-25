@@ -13,8 +13,8 @@
         templateUrl: 'views/menu/help-menu.tmpl.html',
         link:     function(scope) {
           scope.openHelpContextMenu = function () {
-              openSubMenuService.openSubMenu(scope, 'menuContextHelpOpen');
-          }
+            openSubMenuService.openSubMenu(scope, 'menuContextHelpOpen');
+          };
 
           scope.openHelpModal = function openHelpModal() {
             $modal.open({
