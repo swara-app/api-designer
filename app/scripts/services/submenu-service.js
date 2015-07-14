@@ -2,12 +2,11 @@
   'use strict';
 
   angular.module('ramlEditorApp')
-    .service('openSubMenuService', function openSubMenuService(
+    .service('subMenuService', function subMenuService(
       $timeout,
       $window
     ) {
-
-      var openSubMenu = function (scope, subMenuName) {
+      this.open = function (scope, subMenuName) {
         $timeout(function () {
           $window.addEventListener('click', function self () {
             scope.$apply(function () {
@@ -19,10 +18,6 @@
         });
 
         scope[subMenuName] = true;
-      };
-
-      return {
-        openSubMenu: openSubMenu
       };
     });
 })();

@@ -6,14 +6,14 @@
       $modal,
       $timeout,
       $window,
-      openSubMenuService
+      subMenuService
     ) {
       return {
         restrict: 'E',
         templateUrl: 'views/menu/help-menu.tmpl.html',
         link:     function(scope) {
           scope.openHelpContextMenu = function () {
-            openSubMenuService.openSubMenu(scope, 'menuContextHelpOpen');
+            subMenuService.open(scope, 'menuContextHelpOpen');
           };
 
           scope.openHelpModal = function openHelpModal() {

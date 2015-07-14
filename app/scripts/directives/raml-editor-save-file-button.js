@@ -8,7 +8,7 @@
       $window,
       $timeout,
       $q,
-      openSubMenuService
+      subMenuService
     ) {
       return {
         restrict: 'E',
@@ -23,7 +23,7 @@
         ].join('\n'),
         link:     function(scope) {
           scope.openContextMenu = function () {
-            openSubMenuService.openSubMenu(scope, 'contextMenuOpen');
+            subMenuService.open(scope, 'contextMenuOpen');
           };
 
           scope.saveFile = function saveFile() {
